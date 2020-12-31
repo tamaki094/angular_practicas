@@ -1,0 +1,27 @@
+<ng-container *ngIf="!isLogged; else logueado">
+    <button (click)="isLogged = true " class="btn btn-primary">Iniciar Sesion</button>
+    <button class="btn btn-warning">Registrar</button>
+    <button (click)="addNivel()" class="btn btn-danger">Sumar Nivel</button>
+    <button (click)="substractNivel()" class="btn btn-dark">Restar Nivel</button>
+</ng-container>
+
+<ng-template #logueado>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#" *ngIf="nivel >= 5">Habitacion VIP</a>
+                <a class="nav-item nav-link" href="#" (click)="isLogged = false ">Cerrar Sesion</a>              
+            </div>
+        </div>
+        <span class="navbar-text">
+            Usuario: <strong><span>{{nombre_usuario}}</span></strong>
+            |
+            Nivel: <strong><span>{{nivel}}</span></strong>
+        </span>
+      </nav>
+</ng-template>

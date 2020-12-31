@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "tutorial"
+  "defaultProject": "tutorial",
+  "cli": {
+    "analytics": "789d2ca2-a8a1-4571-be77-afeac6dcd88c"
+  }
 }
