@@ -1,0 +1,42 @@
+
+
+<button
+    [type]="tipo" 
+    (click)="funcionCick()" 
+    (dblclick)="funcionDblCick()" 
+    [disabled]="desactivado"
+    [class]="estilo"
+>
+    Titulo
+</button>
+
+<h4>Tu nombre es {{ lbl1 }} </h4>
+<h4>Tu nombre es {{ lbl2 }} </h4>
+<h4>Tu nombre es {{ lbl3 }} </h4>
+
+<input type="text" [ngModel]="lbl1" />
+<input type="text" (ngModel)="lbl2" />
+<input type="text" [(ngModel)]="lbl3" (ngModelChange)="log($event)"/>
+<button (click)="desactivado=!desactivado">Cambiar ESTADO</button>
+
+
+<!--Con ngModel-->
+<h4>Carro seleccionado: {{ seleccion }}</h4>
+
+<select [(ngModel)]="seleccion">
+    <option value="Toyota">Toyota</option>
+    <option value="Nissan">Nissan</option>
+    <option value="Chevrolet">Chevrolet</option>
+    <option value="BMW">BMW</option>
+</select>
+
+
+<!--Sin ngModel-->
+<h4>Anime seleccionado: {{ seleccion2 }}</h4>
+
+<select [value]="seleccion2" (change)="seleccion2 = $event.target.value">
+    <option value="Kuroshitsuji">Kuroshitsuji</option>
+    <option value="Naruto">Naruto</option>
+    <option value="Hellsing">Hellsing</option>
+    <option value="Clannad">Clannad</option>
+</select>
