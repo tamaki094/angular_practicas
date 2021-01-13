@@ -11,7 +11,19 @@ import { Component, OnInit } from '@angular/core';
 export class Parte4Component implements OnInit 
 {
 
-  constructor() { }
+  public desactivado:boolean = true;
+  public tipo:string = 'submit';
+  public estilo:string = 'btn btn-primary'
+  public lbl1:string='Algo'
+  public lbl2:string=''
+  public lbl3:string=''
+  public seleccion:string=''
+  public seleccion2:string='Naruto'
+
+  constructor() 
+  {
+
+  }
 
   ngOnInit(): void 
   {
@@ -32,13 +44,4 @@ export class Parte4Component implements OnInit
   {
     console.log(evento)
   }
-
-  desactivado = true
-  tipo = 'submit'
-  estilo = 'btn btn-primary'
-  lbl1:string='Algo'
-  lbl12:string=''
-  lbl13:string=''
-  seleccion:string=''
-  seleccion2:string='Naruto'
 }
