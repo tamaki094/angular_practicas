@@ -14,7 +14,8 @@ export class ApiService {
 
   login(user: string, password: string): Observable<LoginResponse>
   {
-    password = btoa(password);
-    return this._http.post<LoginResponse>(`${this.api_url}/auth/login`, {user:user, password: password})
+    //password = btoa(password);
+    console.log(`${this.api_url}/autenticacion/login`);
+    return this._http.post<LoginResponse>(`${this.api_url}/api/usuarios/autenticacion/login`, {user:user, pass: password})
   }
 }

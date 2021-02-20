@@ -26,14 +26,21 @@ export class LoginComponent implements OnInit {
   {
     const user = (document.querySelector('#username') as HTMLInputElement).value
     const password = (document.querySelector('#exampleInputPassword1') as HTMLInputElement).value
-  
-    this._api.login(user, password).subscribe(response => {
-      if(response.success)
-      {
-        this._user.user = response.user;
-        console.log(this._user);
-      }
-    });
-  }
+    
+    console.log("vamo a hacer peticion");
+    
+    this._api.login(user, password).subscribe(response => 
+    {
+      console.log("La respuesta es: ");
+      console.log(response);
+      console.log("---------");
+
+        if(response.success)
+        {
+          this._user.user = response.user;
+          console.log(this._user);
+        }
+      });
+    }
 
 }

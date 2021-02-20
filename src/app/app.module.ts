@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { UserComponent } from './components/user/user.component';
 import { Parte4Component } from './components/parte4/parte4.component';
 import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule

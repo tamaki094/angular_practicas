@@ -35,4 +35,5 @@ export interface User
     type: string
     user: string 
     email: string 
+    password: number
 }
