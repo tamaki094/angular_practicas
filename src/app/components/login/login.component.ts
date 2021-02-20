@@ -12,7 +12,7 @@ import { UserService } from '../services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _user: UserService, private  _api: ApiService) 
+  constructor(public _user: UserService, public  _api: ApiService) 
   { 
     
    
